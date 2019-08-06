@@ -103,8 +103,7 @@
             </form>
             <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -135,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -164,25 +164,90 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+This exercise uses the function ${MapColor}$ and predicates
+${In}(x,y)$, ${Borders}(x,y)$, and ${Country}(x)$, whose arguments
+are geographical regions, along with constant symbols for various
+regions. In each of the following we give an English sentence and a
+number of candidate logical expressions. For each of the logical
+expressions, state whether it (1) correctly expresses the English
+sentence; (2) is syntactically invalid and therefore meaningless; or (3)
+is syntactically valid but does not express the meaning of the English
+sentence.<br />
+
+1.  Paris and Marseilles are both in France.<br />
+
+    1.  ${In}({Paris} \land {Marseilles}, {France})$.<br />
+
+    2.  ${In}({Paris},{France}) \land {In}({Marseilles},{France})$.<br />
+
+    3.  ${In}({Paris},{France}) \lor {In}({Marseilles},{France})$.<br />
+
+2.  There is a country that borders both Iraq and Pakistan.<br />
+
+    1.  ${\exists\,c\;\;}$
+        ${Country}(c) \land {Border}(c,{Iraq}) \land {Border}(c,{Pakistan})$.<br />
+
+    2.  ${\exists\,c\;\;}$
+        ${Country}(c) {\:\;{\Rightarrow}\:\;}[{Border}(c,{Iraq}) \land {Border}(c,{Pakistan})]$.<br />
+
+    3.  $[{\exists\,c\;\;}$
+        ${Country}(c)] {\:\;{\Rightarrow}\:\;}[{Border}(c,{Iraq}) \land {Border}(c,{Pakistan})]$.<br />
+
+    4.  ${\exists\,c\;\;}$
+        ${Border}({Country}(c),{Iraq} \land {Pakistan})$.<br />
+
+3.  All countries that border Ecuador are in South America.<br />
+
+    1.  ${\forall\,c\;\;}  Country(c) \land {Border}(c,{Ecuador}) {\:\;{\Rightarrow}\:\;}{In}(c,{SouthAmerica})$.<br />
+
+    2.  ${\forall\,c\;\;}  {Country}(c) {\:\;{\Rightarrow}\:\;}[{Border}(c,{Ecuador}) {\:\;{\Rightarrow}\:\;}{In}(c,{SouthAmerica})]$.<br />
+
+    3.  ${\forall\,c\;\;}  [{Country}(c) {\:\;{\Rightarrow}\:\;}{Border}(c,{Ecuador})] {\:\;{\Rightarrow}\:\;}{In}(c,{SouthAmerica})$.<br />
+
+    4.  ${\forall\,c\;\;}  Country(c) \land {Border}(c,{Ecuador}) \land {In}(c,{SouthAmerica})$.<br />
+
+4.  No region in South America borders any region in Europe.<br />
+
+    1.  $\lnot [{\exists\,c,d\;\;}  {In}(c,{SouthAmerica}) \land {In}(d,{Europe}) \land {Borders}(c,d)]$.<br />
+
+    2.  ${\forall\,c,d\;\;}  [{In}(c,{SouthAmerica}) \land {In}(d,{Europe})] {\:\;{\Rightarrow}\:\;}\lnot {Borders}(c,d)]$.<br />
+
+    3.  $\lnot {\forall\,c\;\;}  {In}(c,{SouthAmerica}) {\:\;{\Rightarrow}\:\;}{\exists\,d\;\;} {In}(d,{Europe}) \land<br />
+        \lnot {Borders}(c,d)$.
+
+    4.  ${\forall\,c\;\;} {In}(c,{SouthAmerica}) {\:\;{\Rightarrow}\:\;}{\forall\,d\;\;} {In}(d,{Europe}) {\:\;{\Rightarrow}\:\;}\lnot {Borders}(c,d)$.<br />
+
+5.  No two adjacent countries have the same map color.<br />
+
+    1.  ${\forall\,x,y\;\;} \lnot {Country}(x) \lor \lnot {Country}(y) \lor \lnot {Borders}(x,y) \lor {}$\
+        $\lnot ({MapColor}(x) = {MapColor}(y))$.<br />
+
+    2.  ${\forall\,x,y\;\;} ({Country}(x) \land {Country}(y) \land {Borders}(x,y) \land \lnot(x=y)) {\:\;{\Rightarrow}\:\;}{}$\
+        $\lnot ({MapColor}(x) = {MapColor}(y))$.<br />
+
+    3.  ${\forall\,x,y\;\;} {Country}(x) \land {Country}(y) \land {Borders}(x,y) \land {}$\
+        $\lnot ({MapColor}(x) = {MapColor}(y))$.<br />
+
+    4.  ${\forall\,x,y\;\;} ({Country}(x) \land {Country}(y) \land {Borders}(x,y) ) {\:\;{\Rightarrow}\:\;}{MapColor}(x\neq y)$.
+<br />
+</div>
 
   </div>
   <div class="card">
     <div class="card-header p-2">
         <a href='#' class="p-2">Exercise 8.10</a>
-        <a class="solve_question" id="solve_question">
-        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch8ex10');" href="#">
-          <i id="ch8ex10" class="fas fa-bookmark" style="color:white"></i>
-        </button>
-        </a>
-
-
+        <a class="bookmarkquest" id="bookmark_question">
+          <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch8ex10');" href="#">
+            <i id="ch8ex10" class="fas fa-bookmark" style="color:white"></i>
+          </button>
+          </a>
         <a class="edit_question" id="editt_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch8ex10');" href="#" id="buttonsolve">
         <i id="ch8ex10" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
-
     </div>
     <div class="card-body">
         <p class="card-text">
@@ -260,13 +325,11 @@ sentence.<br>
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-
-        <a class="reqcomm" id="reqcomm" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" onclick="edit('ch8ex10');" href="#" id="requestcommsol">
-        <i id="ch8ex10" class="fas fa-hands" style="color:white"></i>
-        </button>
-        </a>
-
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
                 <a class="viewcommsolution" id="viewcommsolution">
                 <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
                 <i class="fas fa-bars" style="color:white"></i>
@@ -306,7 +369,7 @@ sentence.<br>
 <br><br>
 <div id="writeeanswer"></div>
 <div class="styling" id="styling2">
-<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/sachin10101998bot/aima-exercises/master/ch8ex10">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch8ex10">
     <span class="contact100-form-title">
         <center>Submit Solution</center>
     </span>
@@ -326,7 +389,7 @@ sentence.<br>
         <textarea class="input100" placeholder="Your solution here..." name="fields[message]" tabindex="1"></textarea>
         <span class="focus-input100"></span>
     </div>
-    <input type="hidden" name="options[redirect]" value="https://sachin10101998bot.github.io/aima-exercises/answersubmitted/">
+    <input type="hidden" name="options[redirect]" value="https://aimacode.github.io/aima-exercises/answersubmitted/">
     
     <div class="container-contact100-form-btn">
         
@@ -341,8 +404,7 @@ sentence.<br>
 </div>
 </article>
 <script>
-var baseurl="https://github.com/sachin10101998bot/aima-exercises/edit/master/markdown/";
-var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var chapterName = String('8-First-Order-Logic');
   var fullName = String('ch8ex10');
   var dot = fullName.indexOf("x");
@@ -350,11 +412,10 @@ var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("reqcomm").href = "https://github.com/sachin10101998bot/aima-exercises/issues/new?title=Request%20to%20get%20community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Describe%20the%20issue/requirement%20in%20detail";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
-  document.getElementById("link").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
-  document.getElementById("link2").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
       </div>
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>

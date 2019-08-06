@@ -103,8 +103,7 @@
             </form>
             <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -135,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -164,25 +164,46 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+The <b>arc reversal</b> operation of in a Bayesian network allows us to change the direction
+of an arc $X\rightarrow Y$ while preserving the joint probability
+distribution that the network represents @Shachter:1986. Arc reversal
+may require introducing new arcs: all the parents of $X$ also become
+parents of $Y$, and all parents of $Y$ also become parents of $X$.<br />
+
+1.  Assume that $X$ and $Y$ start with $m$ and $n$ parents,
+    respectively, and that all variables have $k$ values. By calculating
+    the change in size for the CPTs of $X$ and $Y$, show that the total
+    number of parameters in the network cannot decrease during
+    arc reversal. (<i>Hint</i>: the parents of $X$ and $Y$ need
+    not be disjoint.)<br />
+
+2.  Under what circumstances can the total number remain constant?<br />
+
+3.  Let the parents of $X$ be $\textbf{U} \cup \textbf{V}$ and the parents of $Y$ be
+    $\textbf{V} \cup \textbf{W}$, where $\textbf{U}$ and $\textbf{W}$ are disjoint. The formulas for the
+    new CPTs after arc reversal are as follows: $$\begin{aligned}
+    {\textbf{P}}(Y\textbf{U},\textbf{V},\textbf{W}) &amp;=&amp; \sum_x {\textbf{P}}(Y\textbf{V},\textbf{W}, x) {\textbf{P}}(x\textbf{U}, \textbf{V}) \\
+    {\textbf{P}}(X\textbf{U},\textbf{V},\textbf{W}, Y) &amp;=&amp; {\textbf{P}}(YX, \textbf{V}, \textbf{W}) {\textbf{P}}(X\textbf{U}, \textbf{V}) / {\textbf{P}}(Y\textbf{U},\textbf{V},\textbf{W})\ .\end{aligned}$$
+    Prove that the new network expresses the same joint distribution
+    over all variables as the original network.
+</div>
 
   </div>
   <div class="card">
     <div class="card-header p-2">
         <a href='#' class="p-2">Exercise 14.4</a>
-        <a class="solve_question" id="solve_question">
-        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch14ex4');" href="#">
-          <i id="ch14ex4" class="fas fa-bookmark" style="color:white"></i>
-        </button>
-        </a>
-
-
+        <a class="bookmarkquest" id="bookmark_question">
+          <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch14ex4');" href="#">
+            <i id="ch14ex4" class="fas fa-bookmark" style="color:white"></i>
+          </button>
+          </a>
         <a class="edit_question" id="editt_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch14ex4');" href="#" id="buttonsolve">
         <i id="ch14ex4" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
-
     </div>
     <div class="card-body">
         <p class="card-text">
@@ -216,13 +237,11 @@ parents of $Y$, and all parents of $Y$ also become parents of $X$.<br>
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-
-        <a class="reqcomm" id="reqcomm" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" onclick="edit('ch14ex4');" href="#" id="requestcommsol">
-        <i id="ch14ex4" class="fas fa-hands" style="color:white"></i>
-        </button>
-        </a>
-
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
                 <a class="viewcommsolution" id="viewcommsolution">
                 <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
                 <i class="fas fa-bars" style="color:white"></i>
@@ -262,7 +281,7 @@ parents of $Y$, and all parents of $Y$ also become parents of $X$.<br>
 <br><br>
 <div id="writeeanswer"></div>
 <div class="styling" id="styling2">
-<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/sachin10101998bot/aima-exercises/master/ch14ex4">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch14ex4">
     <span class="contact100-form-title">
         <center>Submit Solution</center>
     </span>
@@ -282,7 +301,7 @@ parents of $Y$, and all parents of $Y$ also become parents of $X$.<br>
         <textarea class="input100" placeholder="Your solution here..." name="fields[message]" tabindex="1"></textarea>
         <span class="focus-input100"></span>
     </div>
-    <input type="hidden" name="options[redirect]" value="https://sachin10101998bot.github.io/aima-exercises/answersubmitted/">
+    <input type="hidden" name="options[redirect]" value="https://aimacode.github.io/aima-exercises/answersubmitted/">
     
     <div class="container-contact100-form-btn">
         
@@ -297,8 +316,7 @@ parents of $Y$, and all parents of $Y$ also become parents of $X$.<br>
 </div>
 </article>
 <script>
-var baseurl="https://github.com/sachin10101998bot/aima-exercises/edit/master/markdown/";
-var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var chapterName = String('14-Probabilistic-Reasoning');
   var fullName = String('ch14ex4');
   var dot = fullName.indexOf("x");
@@ -306,11 +324,10 @@ var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("reqcomm").href = "https://github.com/sachin10101998bot/aima-exercises/issues/new?title=Request%20to%20get%20community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Describe%20the%20issue/requirement%20in%20detail";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
-  document.getElementById("link").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
-  document.getElementById("link2").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
       </div>
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>

@@ -103,8 +103,7 @@
             </form>
             <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -135,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -164,25 +164,49 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+This exercise is concerned with filtering in an environment with no
+landmarks. Consider a vacuum robot in an empty room, represented by an
+$n \times m$ rectangular grid. The robot’s location is hidden; the only
+evidence available to the observer is a noisy location sensor that gives
+an approximation to the robot’s location. If the robot is at location
+$(x, y)$ then with probability .1 the sensor gives the correct location,
+with probability .05 each it reports one of the 8 locations immediately
+surrounding $(x, y)$, with probability .025 each it reports one of the
+16 locations that surround those 8, and with the remaining probability
+of .1 it reports “no reading.” The robot’s policy is to pick a direction
+and follow it with probability .7 on each step; the robot switches to a
+randomly selected new heading with probability .3 (or with probability 1
+if it encounters a wall). Implement this as an HMM and do filtering to
+track the robot. How accurately can we track the robot’s path?
+
+<figure>
+  <img src="https://aimacode.github.io/aima-exercises/figures/switching-kf.svg" alt="switching-kf-figure" id="switching-kf-figure" style="width:100%" />
+  <figcaption><center><b>A Bayesian network representation of a switching Kalman filter. The switching variable $S_t$ is a discrete state variable whose value determines
+  the transition model for the continuous state variables $\textbf{X}_t$.
+  For any discrete state $\textit{i}$, the transition model
+  $\textbf{P}(\textbf{X}_{t+1}|\textbf{X}_t,S_t= i)$ is a linear Gaussian model, just as in a
+  regular Kalman filter. The transition model for the discrete state,
+  $\textbf{P}(S_{t+1}|S_t)$, can be thought of as a matrix, as in a hidden
+  Markov model.</b></center></figcaption>
+</figure>
+</div>
 
   </div>
   <div class="card">
     <div class="card-header p-2">
         <a href='#' class="p-2">Exercise 15.11</a>
-        <a class="solve_question" id="solve_question">
-        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch15ex11');" href="#">
-          <i id="ch15ex11" class="fas fa-bookmark" style="color:white"></i>
-        </button>
-        </a>
-
-
+        <a class="bookmarkquest" id="bookmark_question">
+          <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch15ex11');" href="#">
+            <i id="ch15ex11" class="fas fa-bookmark" style="color:white"></i>
+          </button>
+          </a>
         <a class="edit_question" id="editt_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch15ex11');" href="#" id="buttonsolve">
         <i id="ch15ex11" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
-
     </div>
     <div class="card-body">
         <p class="card-text">
@@ -219,13 +243,11 @@ track the robot. How accurately can we track the robot’s path?
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-
-        <a class="reqcomm" id="reqcomm" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" onclick="edit('ch15ex11');" href="#" id="requestcommsol">
-        <i id="ch15ex11" class="fas fa-hands" style="color:white"></i>
-        </button>
-        </a>
-
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
                 <a class="viewcommsolution" id="viewcommsolution">
                 <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
                 <i class="fas fa-bars" style="color:white"></i>
@@ -265,7 +287,7 @@ track the robot. How accurately can we track the robot’s path?
 <br><br>
 <div id="writeeanswer"></div>
 <div class="styling" id="styling2">
-<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/sachin10101998bot/aima-exercises/master/ch15ex11">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch15ex11">
     <span class="contact100-form-title">
         <center>Submit Solution</center>
     </span>
@@ -285,7 +307,7 @@ track the robot. How accurately can we track the robot’s path?
         <textarea class="input100" placeholder="Your solution here..." name="fields[message]" tabindex="1"></textarea>
         <span class="focus-input100"></span>
     </div>
-    <input type="hidden" name="options[redirect]" value="https://sachin10101998bot.github.io/aima-exercises/answersubmitted/">
+    <input type="hidden" name="options[redirect]" value="https://aimacode.github.io/aima-exercises/answersubmitted/">
     
     <div class="container-contact100-form-btn">
         
@@ -300,8 +322,7 @@ track the robot. How accurately can we track the robot’s path?
 </div>
 </article>
 <script>
-var baseurl="https://github.com/sachin10101998bot/aima-exercises/edit/master/markdown/";
-var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var chapterName = String('15-Probabilistic-Reasoning-Over-Time');
   var fullName = String('ch15ex11');
   var dot = fullName.indexOf("x");
@@ -309,11 +330,10 @@ var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("reqcomm").href = "https://github.com/sachin10101998bot/aima-exercises/issues/new?title=Request%20to%20get%20community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Describe%20the%20issue/requirement%20in%20detail";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
-  document.getElementById("link").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
-  document.getElementById("link2").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
       </div>
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>

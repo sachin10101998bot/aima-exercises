@@ -103,8 +103,7 @@
             </form>
             <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -135,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -164,25 +164,57 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Let $H_x$ be a random variable denoting the
+handedness of an individual $x$, with possible values $l$ or $r$. A
+common hypothesis is that left- or right-handedness is inherited by a
+simple mechanism; that is, perhaps there is a gene $G_x$, also with
+values $l$ or $r$, and perhaps actual handedness turns out mostly the
+same (with some probability $s$) as the gene an individual possesses.
+Furthermore, perhaps the gene itself is equally likely to be inherited
+from either of an individual’s parents, with a small nonzero probability
+$m$ of a random mutation flipping the handedness.<br />
+
+1.  Which of the three networks in
+    Figure <a href="#">handedness-figure</a> claim that
+    $ {\textbf{P}}(G_{father},G_{mother},G_{child}) = {\textbf{P}}(G_{father}){\textbf{P}}(G_{mother}){\textbf{P}}(G_{child})$?<br />
+
+2.  Which of the three networks make independence claims that are
+    consistent with the hypothesis about the inheritance of handedness?<br />
+
+3.  Which of the three networks is the best description of the
+    hypothesis?<br />
+
+4.  Write down the CPT for the $G_{child}$ node in network (a), in
+    terms of $s$ and $m$.<br />
+
+5.  Suppose that
+    $P(G_{father}l)=P(G_{mother}l)=q$. In
+    network (a), derive an expression for $P(G_{child}l)$
+    in terms of $m$ and $q$ only, by conditioning on its parent nodes.<br />
+
+6.  Under conditions of genetic equilibrium, we expect the distribution
+    of genes to be the same across generations. Use this to calculate
+    the value of $q$, and, given what you know about handedness in
+    humans, explain why the hypothesis described at the beginning of
+    this question must be wrong.<br />
+</div>
 
   </div>
   <div class="card">
     <div class="card-header p-2">
         <a href='#' class="p-2">Exercise 14.7</a>
-        <a class="solve_question" id="solve_question">
-        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch14ex7');" href="#">
-          <i id="ch14ex7" class="fas fa-bookmark" style="color:white"></i>
-        </button>
-        </a>
-
-
+        <a class="bookmarkquest" id="bookmark_question">
+          <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch14ex7');" href="#">
+            <i id="ch14ex7" class="fas fa-bookmark" style="color:white"></i>
+          </button>
+          </a>
         <a class="edit_question" id="editt_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch14ex7');" href="#" id="buttonsolve">
         <i id="ch14ex7" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
-
     </div>
     <div class="card-body">
         <p class="card-text">
@@ -227,13 +259,11 @@ $m$ of a random mutation flipping the handedness.<br>
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-
-        <a class="reqcomm" id="reqcomm" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" onclick="edit('ch14ex7');" href="#" id="requestcommsol">
-        <i id="ch14ex7" class="fas fa-hands" style="color:white"></i>
-        </button>
-        </a>
-
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
                 <a class="viewcommsolution" id="viewcommsolution">
                 <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
                 <i class="fas fa-bars" style="color:white"></i>
@@ -273,7 +303,7 @@ $m$ of a random mutation flipping the handedness.<br>
 <br><br>
 <div id="writeeanswer"></div>
 <div class="styling" id="styling2">
-<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/sachin10101998bot/aima-exercises/master/ch14ex7">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch14ex7">
     <span class="contact100-form-title">
         <center>Submit Solution</center>
     </span>
@@ -293,7 +323,7 @@ $m$ of a random mutation flipping the handedness.<br>
         <textarea class="input100" placeholder="Your solution here..." name="fields[message]" tabindex="1"></textarea>
         <span class="focus-input100"></span>
     </div>
-    <input type="hidden" name="options[redirect]" value="https://sachin10101998bot.github.io/aima-exercises/answersubmitted/">
+    <input type="hidden" name="options[redirect]" value="https://aimacode.github.io/aima-exercises/answersubmitted/">
     
     <div class="container-contact100-form-btn">
         
@@ -308,8 +338,7 @@ $m$ of a random mutation flipping the handedness.<br>
 </div>
 </article>
 <script>
-var baseurl="https://github.com/sachin10101998bot/aima-exercises/edit/master/markdown/";
-var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var chapterName = String('14-Probabilistic-Reasoning');
   var fullName = String('ch14ex7');
   var dot = fullName.indexOf("x");
@@ -317,11 +346,10 @@ var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("reqcomm").href = "https://github.com/sachin10101998bot/aima-exercises/issues/new?title=Request%20to%20get%20community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Describe%20the%20issue/requirement%20in%20detail";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
-  document.getElementById("link").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
-  document.getElementById("link2").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
       </div>
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>

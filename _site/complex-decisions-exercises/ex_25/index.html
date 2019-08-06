@@ -103,8 +103,7 @@
             </form>
             <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -135,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -164,25 +164,53 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+Teams in the National Hockey League historically received 2 points for
+winning a game and 0 for losing. If the game is tied, an overtime period
+is played; if nobody wins in overtime, the game is a tie and each team
+gets 1 point. But league officials felt that teams were playing too
+conservatively in overtime (to avoid a loss), and it would be more
+exciting if overtime produced a winner. So in 1999 the officials
+experimented in mechanism design: the rules were changed, giving a team
+that loses in overtime 1 point, not 0. It is still 2 points for a win
+and 1 for a tie. <br />
+
+1.  Was hockey a zero-sum game before the rule change? After?<br />
+
+2.  Suppose that at a certain time $t$ in a game, the home team has
+    probability $p$ of winning in regulation time, probability $0.78-p$
+    of losing, and probability 0.22 of going into overtime, where they
+    have probability $q$ of winning, $.9-q$ of losing, and .1 of tying.
+    Give equations for the expected value for the home and
+    visiting teams.<br />
+
+3.  Imagine that it were legal and ethical for the two teams to enter
+    into a pact where they agree that they will skate to a tie in
+    regulation time, and then both try in earnest to win in overtime.
+    Under what conditions, in terms of $p$ and $q$, would it be rational
+    for both teams to agree to this pact?<br />
+
+4.  @Longley+Sankaran:2005 report that since the rule change, the percentage of games with a
+    winner in overtime went up 18.2%, as desired, but the percentage of
+    overtime games also went up 3.6%. What does that suggest about
+    possible collusion or conservative play after the rule change?<br />
+</div>
 
   </div>
   <div class="card">
     <div class="card-header p-2">
         <a href='#' class="p-2">Exercise 17.25</a>
-        <a class="solve_question" id="solve_question">
-        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch17ex25');" href="#">
-          <i id="ch17ex25" class="fas fa-bookmark" style="color:white"></i>
-        </button>
-        </a>
-
-
+        <a class="bookmarkquest" id="bookmark_question">
+          <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch17ex25');" href="#">
+            <i id="ch17ex25" class="fas fa-bookmark" style="color:white"></i>
+          </button>
+          </a>
         <a class="edit_question" id="editt_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch17ex25');" href="#" id="buttonsolve">
         <i id="ch17ex25" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
-
     </div>
     <div class="card-body">
         <p class="card-text">
@@ -223,13 +251,11 @@ and 1 for a tie. <br>
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-
-        <a class="reqcomm" id="reqcomm" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" onclick="edit('ch17ex25');" href="#" id="requestcommsol">
-        <i id="ch17ex25" class="fas fa-hands" style="color:white"></i>
-        </button>
-        </a>
-
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
                 <a class="viewcommsolution" id="viewcommsolution">
                 <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
                 <i class="fas fa-bars" style="color:white"></i>
@@ -269,7 +295,7 @@ and 1 for a tie. <br>
 <br><br>
 <div id="writeeanswer"></div>
 <div class="styling" id="styling2">
-<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/sachin10101998bot/aima-exercises/master/ch17ex25">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch17ex25">
     <span class="contact100-form-title">
         <center>Submit Solution</center>
     </span>
@@ -289,7 +315,7 @@ and 1 for a tie. <br>
         <textarea class="input100" placeholder="Your solution here..." name="fields[message]" tabindex="1"></textarea>
         <span class="focus-input100"></span>
     </div>
-    <input type="hidden" name="options[redirect]" value="https://sachin10101998bot.github.io/aima-exercises/answersubmitted/">
+    <input type="hidden" name="options[redirect]" value="https://aimacode.github.io/aima-exercises/answersubmitted/">
     
     <div class="container-contact100-form-btn">
         
@@ -304,8 +330,7 @@ and 1 for a tie. <br>
 </div>
 </article>
 <script>
-var baseurl="https://github.com/sachin10101998bot/aima-exercises/edit/master/markdown/";
-var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var chapterName = String('17-Making-Complex-Decision');
   var fullName = String('ch17ex25');
   var dot = fullName.indexOf("x");
@@ -313,11 +338,10 @@ var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("reqcomm").href = "https://github.com/sachin10101998bot/aima-exercises/issues/new?title=Request%20to%20get%20community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Describe%20the%20issue/requirement%20in%20detail";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
-  document.getElementById("link").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
-  document.getElementById("link2").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
       </div>
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>

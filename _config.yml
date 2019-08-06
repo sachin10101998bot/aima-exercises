@@ -6,7 +6,7 @@ permalink:           pretty
 title:               Artificial Intelligence
 tagline:             'AIMA Exercises '
 description:         'AIMA Exercises: Exercises for the book Artificial Intelligence: A Modern Approach'
-url:                 https://sachin10101998bot.github.io/aima-exercises/
+url:                 https://aimacode.github.io/aima-exercises/
 baseurl:             '/aima-exercises'
 incremental: true
 # About/contact
@@ -18,6 +18,6 @@ author:
 version:             1.0.0
 #Staticman 
 staticman:
-  repository : sachin10101998bot/aima-exercises # GitHub username/repository eg. "daattali/beautiful-jekyll"
+  repository : aimacode/aima-exercises # GitHub username/repository eg. "daattali/beautiful-jekyll"
   branch     : "master"
   

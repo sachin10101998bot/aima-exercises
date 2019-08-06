@@ -103,8 +103,7 @@
             </form>
             <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -135,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -164,25 +164,57 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+(Adapted from Pearl [@Pearl:1988].) A used-car
+buyer can decide to carry out various tests with various costs (e.g.,
+kick the tires, take the car to a qualified mechanic) and then,
+depending on the outcome of the tests, decide which car to buy. We will
+assume that the buyer is deciding whether to buy car $c_1$, that there
+is time to carry out at most one test, and that $t_1$ is the test of
+$c_1$ and costs \$50.<br />
+
+A car can be in good shape (quality $$q^+$$) or bad shape (quality $q^-$),
+and the tests might help indicate what shape the car is in. Car $c_1$
+costs \$1,500, and its market value is $$\$2,000$$ if it is in good shape; if
+not, $$\$700$$ in repairs will be needed to make it in good shape. The buyer’s
+estimate is that $c_1$ has a 70% chance of being in good shape.<br />
+
+1.  Draw the decision network that represents this problem.<br />
+
+2.  Calculate the expected net gain from buying $c_1$, given no test.<br />
+
+3.  Tests can be described by the probability that the car will pass or
+    fail the test given that the car is in good or bad shape. We have
+    the following information:<br />
+
+    $$P({pass}(c_1,t_1) | q^+(c_1)) = {0.8}$$<br />
+
+    $$P({pass}(c_1,t_1) | q^-(c_1)) = {0.35}$$<br />
+
+    Use Bayes’ theorem to calculate the probability that the car will pass (or fail) its test and hence the probability that it is in good (or bad) shape given each possible test outcome.<br />
+
+4.  Calculate the optimal decisions given either a pass or a fail, and
+    their expected utilities.<br />
+
+5.  Calculate the value of information of the test, and derive an
+    optimal conditional plan for the buyer.<br />
+</div>
 
   </div>
   <div class="card">
     <div class="card-header p-2">
         <a href='#' class="p-2">Exercise 16.22</a>
-        <a class="solve_question" id="solve_question">
-        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch16ex22');" href="#">
-          <i id="ch16ex22" class="fas fa-bookmark" style="color:white"></i>
-        </button>
-        </a>
-
-
+        <a class="bookmarkquest" id="bookmark_question">
+          <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch16ex22');" href="#">
+            <i id="ch16ex22" class="fas fa-bookmark" style="color:white"></i>
+          </button>
+          </a>
         <a class="edit_question" id="editt_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch16ex22');" href="#" id="buttonsolve">
         <i id="ch16ex22" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
-
     </div>
     <div class="card-body">
         <p class="card-text">
@@ -227,13 +259,11 @@ estimate is that $c_1$ has a 70% chance of being in good shape.<br>
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-
-        <a class="reqcomm" id="reqcomm" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" onclick="edit('ch16ex22');" href="#" id="requestcommsol">
-        <i id="ch16ex22" class="fas fa-hands" style="color:white"></i>
-        </button>
-        </a>
-
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
                 <a class="viewcommsolution" id="viewcommsolution">
                 <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
                 <i class="fas fa-bars" style="color:white"></i>
@@ -273,7 +303,7 @@ estimate is that $c_1$ has a 70% chance of being in good shape.<br>
 <br><br>
 <div id="writeeanswer"></div>
 <div class="styling" id="styling2">
-<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/sachin10101998bot/aima-exercises/master/ch16ex22">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch16ex22">
     <span class="contact100-form-title">
         <center>Submit Solution</center>
     </span>
@@ -293,7 +323,7 @@ estimate is that $c_1$ has a 70% chance of being in good shape.<br>
         <textarea class="input100" placeholder="Your solution here..." name="fields[message]" tabindex="1"></textarea>
         <span class="focus-input100"></span>
     </div>
-    <input type="hidden" name="options[redirect]" value="https://sachin10101998bot.github.io/aima-exercises/answersubmitted/">
+    <input type="hidden" name="options[redirect]" value="https://aimacode.github.io/aima-exercises/answersubmitted/">
     
     <div class="container-contact100-form-btn">
         
@@ -308,8 +338,7 @@ estimate is that $c_1$ has a 70% chance of being in good shape.<br>
 </div>
 </article>
 <script>
-var baseurl="https://github.com/sachin10101998bot/aima-exercises/edit/master/markdown/";
-var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var chapterName = String('16-Making-Simple-Decisions');
   var fullName = String('ch16ex22');
   var dot = fullName.indexOf("x");
@@ -317,11 +346,10 @@ var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("reqcomm").href = "https://github.com/sachin10101998bot/aima-exercises/issues/new?title=Request%20to%20get%20community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Describe%20the%20issue/requirement%20in%20detail";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
-  document.getElementById("link").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
-  document.getElementById("link2").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
       </div>
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>

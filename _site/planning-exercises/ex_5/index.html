@@ -103,8 +103,7 @@
             </form>
             <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -135,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -164,25 +164,58 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+The original {Strips} planner was designed to control Shakey the robot.
+Figure <a href="#shakey-figure">shakey-figure</a> shows a version of Shakey’s world
+consisting of four rooms lined up along a corridor, where each room has
+a door and a light switch. The actions in Shakey’s world include moving from place to place,
+pushing movable objects (such as boxes), climbing onto and down from
+rigid objects (such as boxes), and turning light switches on and off.
+The robot itself could not climb on a box or toggle a switch, but the
+planner was capable of finding and printing out plans that were beyond
+the robot’s abilities. Shakey’s six actions are the following:<br />
+
+-   ${Go}(x,y,r)$, which requires that Shakey be ${At}$ $x$ and that
+    $x$ and $y$ are locations ${In}$ the same room $r$. By convention
+    a door between two rooms is in both of them.<br />
+
+-   Push a box $b$ from location $x$ to location $y$ within the same
+    room: ${Push}(b,x,y,r)$. You will need the predicate ${Box}$ and
+    constants for the boxes.<br />
+
+-   Climb onto a box from position $x$: ${ClimbUp}(x, b)$; climb down
+    from a box to position $x$: ${ClimbDown}(b, x)$. We will need the
+    predicate ${On}$ and the constant ${Floor}$.<br />
+
+-   Turn a light switch on or off: ${TurnOn}(s,b)$;
+    ${TurnOff}(s,b)$. To turn a light on or off, Shakey must be on top
+    of a box at the light switch’s location.<br />
+
+Write PDDL sentences for Shakey’s six actions and the initial state from
+Construct a plan for Shakey to
+get ${Box}{}_2$ into ${Room}{}_2$.<br />
+
+  <figure>
+    <img src="https://aimacode.github.io/aima-exercises/figures/shakey2.svg" alt="shakey-figure" id="shakey-figure" style="width:100%" />
+    <figcaption><center><b>Shakey's world. Shakey can move between landmarks within a room, can pass through the door between rooms, can climb climbable objects and push pushable objects, and can flip light switches.</b></center></figcaption>
+  </figure>
+</div>
 
   </div>
   <div class="card">
     <div class="card-header p-2">
         <a href='#' class="p-2">Exercise 10.5</a>
-        <a class="solve_question" id="solve_question">
-        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch10ex5');" href="#">
-          <i id="ch10ex5" class="fas fa-bookmark" style="color:white"></i>
-        </button>
-        </a>
-
-
+        <a class="bookmarkquest" id="bookmark_question">
+          <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch10ex5');" href="#">
+            <i id="ch10ex5" class="fas fa-bookmark" style="color:white"></i>
+          </button>
+          </a>
         <a class="edit_question" id="editt_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch10ex5');" href="#" id="buttonsolve">
         <i id="ch10ex5" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
-
     </div>
     <div class="card-body">
         <p class="card-text">
@@ -228,13 +261,11 @@ get ${Box}{}_2$ into ${Room}{}_2$.<br>
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-
-        <a class="reqcomm" id="reqcomm" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" onclick="edit('ch10ex5');" href="#" id="requestcommsol">
-        <i id="ch10ex5" class="fas fa-hands" style="color:white"></i>
-        </button>
-        </a>
-
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
                 <a class="viewcommsolution" id="viewcommsolution">
                 <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
                 <i class="fas fa-bars" style="color:white"></i>
@@ -274,7 +305,7 @@ get ${Box}{}_2$ into ${Room}{}_2$.<br>
 <br><br>
 <div id="writeeanswer"></div>
 <div class="styling" id="styling2">
-<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/sachin10101998bot/aima-exercises/master/ch10ex5">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch10ex5">
     <span class="contact100-form-title">
         <center>Submit Solution</center>
     </span>
@@ -294,7 +325,7 @@ get ${Box}{}_2$ into ${Room}{}_2$.<br>
         <textarea class="input100" placeholder="Your solution here..." name="fields[message]" tabindex="1"></textarea>
         <span class="focus-input100"></span>
     </div>
-    <input type="hidden" name="options[redirect]" value="https://sachin10101998bot.github.io/aima-exercises/answersubmitted/">
+    <input type="hidden" name="options[redirect]" value="https://aimacode.github.io/aima-exercises/answersubmitted/">
     
     <div class="container-contact100-form-btn">
         
@@ -309,8 +340,7 @@ get ${Box}{}_2$ into ${Room}{}_2$.<br>
 </div>
 </article>
 <script>
-var baseurl="https://github.com/sachin10101998bot/aima-exercises/edit/master/markdown/";
-var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var chapterName = String('10-Classical-Planning');
   var fullName = String('ch10ex5');
   var dot = fullName.indexOf("x");
@@ -318,11 +348,10 @@ var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("reqcomm").href = "https://github.com/sachin10101998bot/aima-exercises/issues/new?title=Request%20to%20get%20community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Describe%20the%20issue/requirement%20in%20detail";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
-  document.getElementById("link").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
-  document.getElementById("link2").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
       </div>
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>

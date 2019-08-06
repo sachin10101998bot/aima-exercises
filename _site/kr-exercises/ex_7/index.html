@@ -103,8 +103,7 @@
             </form>
             <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -135,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -164,25 +164,86 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+(Adapted from an example by Doug Lenat.) Your mission is to capture, in
+logical form, enough knowledge to answer a series of questions about the
+following simple scenario:<br />
+<br />
+<i> Yesterday John went to the North Berkeley Safeway supermarket and</i><br />
+<i> bought two pounds of tomatoes and a pound of ground beef.</i>
+
+Start by trying to represent the content of the sentence as a series of
+assertions. You should write sentences that have straightforward logical
+structure (e.g., statements that objects have certain properties, that
+objects are related in certain ways, that all objects satisfying one
+property satisfy another). The following might help you get started:<br />
+
+-   Which classes, objects, and relations would you need? What are their
+    parents, siblings and so on? (You will need events and temporal
+    ordering, among other things.)<br />
+
+-   Where would they fit in a more general hierarchy?<br />
+
+-   What are the constraints and interrelationships among them?<br />
+
+-   How detailed must you be about each of the various concepts?<br />
+
+To answer the questions below, your knowledge base must include
+background knowledge. You’ll have to deal with what kind of things are
+at a supermarket, what is involved with purchasing the things one
+selects, what the purchases will be used for, and so on. Try to make
+your representation as general as possible. To give a trivial example:
+don’t say “People buy food from Safeway,” because that won’t help you
+with those who shop at another supermarket. Also, don’t turn the
+questions into answers; for example, question (c) asks “Did John buy any
+meat?”—not “Did John buy a pound of ground beef?”<br />
+
+Sketch the chains of reasoning that would answer the questions. If
+possible, use a logical reasoning system to demonstrate the sufficiency
+of your knowledge base. Many of the things you write might be only
+approximately correct in reality, but don’t worry too much; the idea is
+to extract the common sense that lets you answer these questions at all.
+A truly complete answer to this question is <i>extremely</i>
+difficult, probably beyond the state of the art of current knowledge
+representation. But you should be able to put together a consistent set
+of axioms for the limited questions posed here.<br />
+
+1.  Is John a child or an adult? [Adult]<br />
+
+2.  Does John now have at least two tomatoes? [Yes]<br />
+
+3.  Did John buy any meat? [Yes]<br />
+
+4.  If Mary was buying tomatoes at the same time as John, did he see
+    her? [Yes]<br />
+
+5.  Are the tomatoes made in the supermarket? [No]<br />
+
+6.  What is John going to do with the tomatoes? [Eat them]<br />
+
+7.  Does Safeway sell deodorant? [Yes]<br />
+
+8.  Did John bring some money or a credit card to the supermarket?
+    [Yes]<br />
+
+9.  Does John have less money after going to the supermarket? [Yes]<br />
+</div>
 
   </div>
   <div class="card">
     <div class="card-header p-2">
         <a href='#' class="p-2">Exercise 12.7</a>
-        <a class="solve_question" id="solve_question">
-        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch12ex7');" href="#">
-          <i id="ch12ex7" class="fas fa-bookmark" style="color:white"></i>
-        </button>
-        </a>
-
-
+        <a class="bookmarkquest" id="bookmark_question">
+          <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch12ex7');" href="#">
+            <i id="ch12ex7" class="fas fa-bookmark" style="color:white"></i>
+          </button>
+          </a>
         <a class="edit_question" id="editt_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch12ex7');" href="#" id="buttonsolve">
         <i id="ch12ex7" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
-
     </div>
     <div class="card-body">
         <p class="card-text">
@@ -256,13 +317,11 @@ of axioms for the limited questions posed here.<br>
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-
-        <a class="reqcomm" id="reqcomm" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" onclick="edit('ch12ex7');" href="#" id="requestcommsol">
-        <i id="ch12ex7" class="fas fa-hands" style="color:white"></i>
-        </button>
-        </a>
-
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
                 <a class="viewcommsolution" id="viewcommsolution">
                 <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
                 <i class="fas fa-bars" style="color:white"></i>
@@ -302,7 +361,7 @@ of axioms for the limited questions posed here.<br>
 <br><br>
 <div id="writeeanswer"></div>
 <div class="styling" id="styling2">
-<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/sachin10101998bot/aima-exercises/master/ch12ex7">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch12ex7">
     <span class="contact100-form-title">
         <center>Submit Solution</center>
     </span>
@@ -322,7 +381,7 @@ of axioms for the limited questions posed here.<br>
         <textarea class="input100" placeholder="Your solution here..." name="fields[message]" tabindex="1"></textarea>
         <span class="focus-input100"></span>
     </div>
-    <input type="hidden" name="options[redirect]" value="https://sachin10101998bot.github.io/aima-exercises/answersubmitted/">
+    <input type="hidden" name="options[redirect]" value="https://aimacode.github.io/aima-exercises/answersubmitted/">
     
     <div class="container-contact100-form-btn">
         
@@ -337,8 +396,7 @@ of axioms for the limited questions posed here.<br>
 </div>
 </article>
 <script>
-var baseurl="https://github.com/sachin10101998bot/aima-exercises/edit/master/markdown/";
-var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var chapterName = String('12-Knowledge-Representation');
   var fullName = String('ch12ex7');
   var dot = fullName.indexOf("x");
@@ -346,11 +404,10 @@ var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("reqcomm").href = "https://github.com/sachin10101998bot/aima-exercises/issues/new?title=Request%20to%20get%20community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Describe%20the%20issue/requirement%20in%20detail";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
-  document.getElementById("link").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
-  document.getElementById("link2").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
       </div>
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>

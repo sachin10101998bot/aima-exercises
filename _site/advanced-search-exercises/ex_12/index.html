@@ -103,8 +103,7 @@
             </form>
             <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -135,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -164,25 +164,74 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+We can turn the navigation problem in
+Exercise <a hreef="#">path-planning-exercis</a> into an environment as
+follows:<br />
+
+-   The percept will be a list of the positions, *relative to the
+    agent*, of the visible vertices. The percept does
+    *not* include the position of the robot! The robot must
+    learn its own position from the map; for now, you can assume that
+    each location has a different “view.”<br />
+
+-   Each action will be a vector describing a straight-line path
+    to follow. If the path is unobstructed, the action succeeds;
+    otherwise, the robot stops at the point where its path first
+    intersects an obstacle. If the agent returns a zero motion vector
+    and is at the goal (which is fixed and known), then the environment
+    teleports the agent to a *random location* (not inside
+    an obstacle).<br />
+
+-   The performance measure charges the agent 1 point for each unit of
+    distance traversed and awards 1000 points each time the goal
+    is reached.<br />
+
+1.  Implement this environment and a problem-solving agent for it. After
+    each teleportation, the agent will need to formulate a new problem,
+    which will involve discovering its current location.<br />
+
+2.  Document your agent’s performance (by having the agent generate
+    suitable commentary as it moves around) and report its performance
+    over 100 episodes.<br />
+
+3.  Modify the environment so that 30% of the time the agent ends up at
+    an unintended destination (chosen randomly from the other visible
+    vertices if any; otherwise, no move at all). This is a crude model
+    of the motion errors of a real robot. Modify the agent so that when
+    such an error is detected, it finds out where it is and then
+    constructs a plan to get back to where it was and resume the
+    old plan. Remember that sometimes getting back to where it was might
+    also fail! Show an example of the agent successfully overcoming two
+    successive motion errors and still reaching the goal.<br />
+
+4.  Now try two different recovery schemes after an error: (1) head for
+    the closest vertex on the original route; and (2) replan a route to
+    the goal from the new location. Compare the performance of the three
+    recovery schemes. Would the inclusion of search costs affect the
+    comparison?<br />
+
+5.  Now suppose that there are locations from which the view
+    is identical. (For example, suppose the world is a grid with
+    square obstacles.) What kind of problem does the agent now face?
+    What do solutions look like?
+</div>
 
   </div>
   <div class="card">
     <div class="card-header p-2">
         <a href='#' class="p-2">Exercise 4.12</a>
-        <a class="solve_question" id="solve_question">
-        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch4ex12');" href="#">
-          <i id="ch4ex12" class="fas fa-bookmark" style="color:white"></i>
-        </button>
-        </a>
-
-
+        <a class="bookmarkquest" id="bookmark_question">
+          <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch4ex12');" href="#">
+            <i id="ch4ex12" class="fas fa-bookmark" style="color:white"></i>
+          </button>
+          </a>
         <a class="edit_question" id="editt_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch4ex12');" href="#" id="buttonsolve">
         <i id="ch4ex12" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
-
     </div>
     <div class="card-body">
         <p class="card-text">
@@ -244,13 +293,11 @@ follows:<br>
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-
-        <a class="reqcomm" id="reqcomm" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" onclick="edit('ch4ex12');" href="#" id="requestcommsol">
-        <i id="ch4ex12" class="fas fa-hands" style="color:white"></i>
-        </button>
-        </a>
-
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
                 <a class="viewcommsolution" id="viewcommsolution">
                 <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
                 <i class="fas fa-bars" style="color:white"></i>
@@ -290,7 +337,7 @@ follows:<br>
 <br><br>
 <div id="writeeanswer"></div>
 <div class="styling" id="styling2">
-<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/sachin10101998bot/aima-exercises/master/ch4ex12">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch4ex12">
     <span class="contact100-form-title">
         <center>Submit Solution</center>
     </span>
@@ -310,7 +357,7 @@ follows:<br>
         <textarea class="input100" placeholder="Your solution here..." name="fields[message]" tabindex="1"></textarea>
         <span class="focus-input100"></span>
     </div>
-    <input type="hidden" name="options[redirect]" value="https://sachin10101998bot.github.io/aima-exercises/answersubmitted/">
+    <input type="hidden" name="options[redirect]" value="https://aimacode.github.io/aima-exercises/answersubmitted/">
     
     <div class="container-contact100-form-btn">
         
@@ -325,8 +372,7 @@ follows:<br>
 </div>
 </article>
 <script>
-var baseurl="https://github.com/sachin10101998bot/aima-exercises/edit/master/markdown/";
-var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var chapterName = String('4-Beyond-Classical-Search');
   var fullName = String('ch4ex12');
   var dot = fullName.indexOf("x");
@@ -334,11 +380,10 @@ var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("reqcomm").href = "https://github.com/sachin10101998bot/aima-exercises/issues/new?title=Request%20to%20get%20community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Describe%20the%20issue/requirement%20in%20detail";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
-  document.getElementById("link").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
-  document.getElementById("link2").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
       </div>
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>

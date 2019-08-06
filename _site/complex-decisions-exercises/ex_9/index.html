@@ -103,8 +103,7 @@
             </form>
             <br>
             </center>
-      </div>
-      
+            
 
 
 
@@ -135,6 +134,7 @@
 
 </ul>
 
+      </div>
     </div>
       <div class="container content">
         <article class="post">
@@ -164,25 +164,56 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+<div id="hiddden">
+
+This exercise considers two-player MDPs that correspond to zero-sum,
+turn-taking games like those in
+Chapter <a href="#">game-playing-chapter</a>. Let the players be $A$
+and $B$, and let $R(s)$ be the reward for player $A$ in state $s$. (The
+reward for $B$ is always equal and opposite.)<br />
+
+1.  Let $U_A(s)$ be the utility of state $s$ when it is $A$’s turn to
+    move in $s$, and let $U_B(s)$ be the utility of state $s$ when it is
+    $B$’s turn to move in $s$. All rewards and utilities are calculated
+    from $A$’s point of view (just as in a minimax game tree). Write
+    down Bellman equations defining $U_A(s)$ and $U_B(s)$.<br />
+
+2.  Explain how to do two-player value iteration with these equations,
+    and define a suitable termination criterion.<br />
+
+3.  Consider the game described in
+    Figure <a href="#">line-game4-figure</a> on page <a href="#">line-game4-figure</a>.
+    Draw the state space (rather than the game tree), showing the moves
+    by $A$ as solid lines and moves by $B$ as dashed lines. Mark each
+    state with $R(s)$. You will find it helpful to arrange the states
+    $(s_A,s_B)$ on a two-dimensional grid, using $s_A$ and $s_B$ as
+    “coordinates.”<br />
+
+4.  Now apply two-player value iteration to solve this game, and derive
+    the optimal policy.<br />
+
+
+    <figure>
+      <img src="https://aimacode.github.io/aima-exercises/figures/grid-mdp-figure.svg" alt="grid-mdp-figure" id="grid-mdp-figure" style="width:100%" />
+      <figcaption><center><b>(a) $3 \times 3$ world for Exercise <a href="#">3x3-mdp-exercise</a>. The reward for each state is indicated. The upper right square is a terminal state. (b) $101 \times 3$ world for Exercise <a href="#">101x3-mdp-exercise</a> (omitting 93 identical columns in the middle).
+      The start state has reward 0.</b></center></figcaption>
+    </figure>
+</div>
 
   </div>
   <div class="card">
     <div class="card-header p-2">
         <a href='#' class="p-2">Exercise 17.9</a>
-        <a class="solve_question" id="solve_question">
-        <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch17ex9');" href="#">
-          <i id="ch17ex9" class="fas fa-bookmark" style="color:white"></i>
-        </button>
-        </a>
-
-
+        <a class="bookmarkquest" id="bookmark_question">
+          <button type="button" class="btn btn-dark float-right" title="Bookmark Exercise" onclick="bookmark('ch17ex9');" href="#">
+            <i id="ch17ex9" class="fas fa-bookmark" style="color:white"></i>
+          </button>
+          </a>
         <a class="edit_question" id="editt_question" href="#">
         <button type="button" class="btn btn-dark float-right" title="Edit this Question" style="margin-left:10px; margin-right:10px;" onclick="edit('ch17ex9');" href="#" id="buttonsolve">
         <i id="ch17ex9" class="far fa-edit" style="color:white"></i>
         </button>
         </a>
-
-
     </div>
     <div class="card-body">
         <p class="card-text">
@@ -226,13 +257,11 @@ reward for $B$ is always equal and opposite.)<br>
 <div class="card">
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
-
-        <a class="reqcomm" id="reqcomm" href="#">
-        <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" onclick="edit('ch17ex9');" href="#" id="requestcommsol">
-        <i id="ch17ex9" class="fas fa-hands" style="color:white"></i>
-        </button>
-        </a>
-
+                <a class="reqcomm" id="reqcomm" href="#">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <i class="fas fa-hands" style="color:white"></i>
+                </button>
+                </a>
                 <a class="viewcommsolution" id="viewcommsolution">
                 <button type="button" class="btn btn-dark float-right" title="View Community solution" style="margin-left:10px; margin-right:10px;" onclick="myFunction2()" href="#" id="viewsol">
                 <i class="fas fa-bars" style="color:white"></i>
@@ -272,7 +301,7 @@ reward for $B$ is always equal and opposite.)<br>
 <br><br>
 <div id="writeeanswer"></div>
 <div class="styling" id="styling2">
-<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/sachin10101998bot/aima-exercises/master/ch17ex9">
+<form class="contact100-form validate-form" id="new_comment" method="post" action="https://staticmanlove.herokuapp.com/v3/entry/github/aimacode/aima-exercises/master/ch17ex9">
     <span class="contact100-form-title">
         <center>Submit Solution</center>
     </span>
@@ -292,7 +321,7 @@ reward for $B$ is always equal and opposite.)<br>
         <textarea class="input100" placeholder="Your solution here..." name="fields[message]" tabindex="1"></textarea>
         <span class="focus-input100"></span>
     </div>
-    <input type="hidden" name="options[redirect]" value="https://sachin10101998bot.github.io/aima-exercises/answersubmitted/">
+    <input type="hidden" name="options[redirect]" value="https://aimacode.github.io/aima-exercises/answersubmitted/">
     
     <div class="container-contact100-form-btn">
         
@@ -307,8 +336,7 @@ reward for $B$ is always equal and opposite.)<br>
 </div>
 </article>
 <script>
-var baseurl="https://github.com/sachin10101998bot/aima-exercises/edit/master/markdown/";
-var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
+var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var chapterName = String('17-Making-Complex-Decision');
   var fullName = String('ch17ex9');
   var dot = fullName.indexOf("x");
@@ -316,11 +344,10 @@ var baseurl2="https://github.com/sachin10101998bot/aima-exercises/"
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("reqcomm").href = "https://github.com/sachin10101998bot/aima-exercises/issues/new?title=Request%20to%20get%20community%20solution%20for%20Exercise%20%27"+exerciseName+"%27%20in%20%27"+chapterName+"%27&body=Describe%20the%20issue/requirement%20in%20detail";
   document.getElementById("solve_question").href = "#writeeanswer";
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
-  document.getElementById("link").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
-  document.getElementById("link2").innerHTML = "https://api.github.com/repos/sachin10101998bot/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
+  document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
 </script>
       </div>
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
