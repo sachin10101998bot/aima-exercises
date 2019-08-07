@@ -1,0 +1,13 @@
+{
+    "paperRef":[
+      {"paperName":"Turing:1950", "MLA":"Turing, A. M. 'Mind.' Mind 59.236 (1950): 433-460."}, 
+      {"paperName":"Anna", "MLA":"Smith"},
+      {"paperName":"Peter", "MLA":"Jones"}
+    ]
+    ,
+
+    "pageRef":[
+        {"pageName":"vacuum-rationality-page", "pageNumber":"Pg 38"},
+        {"pageName":"nqueens-page", "pageNumber":"Pg 56"}
+    ]
+    }
