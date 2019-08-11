@@ -3,7 +3,7 @@
 Decide whether each of the following
 sentences is valid, unsatisfiable, or neither. Verify your decisions
 using truth tables or the equivalence rules of
-Table \[logical-equivalence-table\] (page <a href="#">logical-equivalence-table</a>).<br>
+Table <a class="insideBookFigRef" id="insidebookfigref" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/vacuum2-sets-figure.png">logical-equivalence-table</a> (page <a class="pageRef" id="pageref" title="" href="#">logical-equivalence-table</a>).<br>
 
 1.  ${Smoke} {\:\;{\Rightarrow}\:\;}{Smoke}$<br>
 

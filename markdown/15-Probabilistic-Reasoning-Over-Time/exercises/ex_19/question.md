@@ -2,8 +2,8 @@
 
 This exercise analyzes in more detail the
 persistent-failure model for the battery sensor in
-Figure <a href="#">battery-persistence-figure</a>(a)
-(page <a href="#">battery-persistence-figure</a>).<br>
+Figure <a class="insideBookFigRef" id="insidebookfigref" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/battery-persistence-figure">battery-persistence-figure</a>(a)
+(page <a class="pageRef" id="pageref" title="" href="#">battery-persistence-figure</a>).<br>
 
 1.  Figure <a href="#">battery-persistence-figure</a>(b) stops at
     $t=32$. Describe qualitatively what should happen as
