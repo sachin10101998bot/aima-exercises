@@ -1,7 +1,7 @@
 
 
 In the $SATPlan$ algorithm in
-Figure <a class="insideBookFigRef" id="insidebookfigref" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/satplan-agent-algorithm.png">satplan-agent-algorithm</a> (page <a class="pageRef" id="pageref" title="" href="#">satplan-agent-algorithm</a>,
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/satplan-agent-algorithm.png">satplan-agent-algorithm</a> (page <a class="pageRef" title="" href="#">satplan-agent-algorithm</a>,
 each call to the satisfiability algorithm asserts a goal $g^T$, where
 $T$ ranges from 0 to $T_{max}$. Suppose instead that the
 satisfiability algorithm is called only once, with the goal

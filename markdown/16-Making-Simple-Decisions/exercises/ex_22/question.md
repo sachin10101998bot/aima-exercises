@@ -1,6 +1,6 @@
 
 
-(Adapted from Pearl [<a class="paperRef" id="paperref" title="" href="">Pearl:1988</a>].) A used-car
+(Adapted from Pearl [<a class="paperRef" title="" href="">Pearl:1988</a>].) A used-car
 buyer can decide to carry out various tests with various costs (e.g.,
 kick the tires, take the car to a qualified mechanic) and then,
 depending on the outcome of the tests, decide which car to buy. We will

@@ -30,7 +30,7 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 </head>
 
-  <body>
+  <body onload="myFunction()">
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -172,6 +172,7 @@ the former?
 </div>
 
   </div>
+ <div class="testt" id="testt">Text</div>
   <div class="card">
     <div class="card-header p-2">
         <a href='#' class="p-2">Exercise 1.15</a>
@@ -200,7 +201,7 @@ the former?
     <div class="card-header p-2">
         <a href="#" class="p-2">Community Solution</a>
                 <a class="reqcomm" id="reqcomm" href="#">
-                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol">
+                <button type="button" class="btn btn-dark float-right" title="Request for Community Solution" href="#" id="requestcommsol" onclick="requestt('ch1ex15');">
                 <i class="fas fa-hands" style="color:white"></i>
                 </button>
                 </a>
@@ -276,6 +277,7 @@ the former?
     </div>
 </form>
 </div>
+
 </article>
 <script>
 var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
@@ -286,7 +288,8 @@ var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
   var subs = fullName.substring(dot+1,fullName.length);
   exerciseName+=subs;
   document.getElementById("editt_question").href = baseurl+chapterName+"/exercises/"+exerciseName+"/question.md";
-  document.getElementById("solve_question").href = "#writeeanswer";
+  
+  
   document.getElementById("addanswerorcomment").href= "#writeeanswer";
   document.getElementById("link").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
   document.getElementById("link2").innerHTML = "https://api.github.com/repos/aimacode/aima-exercises/contents/markdown/"+chapterName+"/exercises/"+exerciseName+"/answers";
@@ -307,12 +310,13 @@ var baseurl="https://github.com/aimacode/aima-exercises/edit/master/markdown/";
         }, false);
       })(document);
     </script>
-    <script src="/aima-exercises/js/crossref.js"></script>
+    
         <script src="/aima-exercises/js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="/aima-exercises/js/answer.js"></script>
         <script src="/aima-exercises/js/commsol.js"></script>
         <script src="/aima-exercises/js/forms.js"></script>
+        <script src="/aima-exercises/js/test.js"></script>
         <script src="/aima-exercises/js/bookmark.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
         
