@@ -17,8 +17,10 @@ request.onload = function() {
     var paperreferencesseculdedlength = crossreferences["paperRef"].length;
     var equationreferencessecluded = crossreferences["equationRef"];
     var equationreferencessecludedlength = crossreferences["equationRef"].length;
-    var insideExercisesFigRefsecluded =crossreferences["insideExercisesFigRef"];
+    var insideExercisesFigRefsecluded =crossreferences["insideExerciseFigRef"];
     var insideExercisesFigRefsecludedlength = crossreferences["insideExerciseFigRef"].length;
+    var insideBookFigRefsecluded =crossreferences["insideBookFigRef"];
+    var insideBookFigRefsecludedlength = crossreferences["insideBookFigRef"].length;
     var myH1 = document.getElementsByClassName('pageRef');
     var myI1 = document.getElementsByClassName('sectionRef');
     var myJ1 = document.getElementsByClassName('exerciseRef');
@@ -33,6 +35,8 @@ request.onload = function() {
     var myM2 = document.getElementsByClassName('equationRef').length;
     var myN1 = document.getElementsByClassName('insideExerciseFigRef');
     var myN2 = document.getElementsByClassName('insideExerciseFigRef').length;
+    var myO1 = document.getElementsByClassName('insideBookFigRef');
+    var myO2 = document.getElementsByClassName('insideBookFigRef').length;
     for(var p=0 ; p<myH2; p++)
     {
       var newpage=myH1[p].innerHTML;
@@ -98,19 +102,42 @@ request.onload = function() {
         }
       }
     }
-    console.log(myM2);
-    console.log(myM1);
+    
     for(var p=0;p<myM2;p++)
     {
       var newequation = myM1[p].innerHTML;
-      console.log(newequation);
+      
       for(var o=0;o<equationreferencessecludedlength;o++)
       {
-        console.log(equationreferencessecluded[o].label);
+        
         if(equationreferencessecluded[o].label=newequation)
         {
           myM1[p].innerHTML=equationreferencessecluded[o].value;
           myM1[p].title=equationreferencessecluded[o].label;
+        }
+      }
+    }
+    for(var p=0;p<myN2;p++)
+    {
+      var newinsideexercisefigrefff=myN1[p].innerHTML;
+      for(var o=0;o<insideExercisesFigRefsecludedlength;o++)
+      {
+        if(insideExercisesFigRefsecluded[o].label=newinsideexercisefigrefff)
+        {
+          myN1[p].innerHTML=insideExercisesFigRefsecluded[o].value;
+          myN1[p].title=insideExercisesFigRefsecluded[o].label;
+        }
+      }
+    }
+    for(var p=0;p<myO2;p++)
+    {
+      var newinsideBookFigReff = myO1[p].innerHTML;
+      for(var o=0;o<insideBookFigRefsecludedlength;o++)
+      {
+        if(insideBookFigRefsecluded[o].label==newinsideBookFigReff)
+        {
+          myO1[p].innerHTML=insideBookFigRefsecluded[o].value;
+          myO1[p].title=insideBookFigRefsecluded[o].label;
         }
       }
     }
