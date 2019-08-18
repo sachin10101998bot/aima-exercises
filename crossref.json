@@ -417,7 +417,7 @@ layout: null
     ]
     ,
 
-    "insideExercisesFigRef":[
+    "insideExerciseFigRef":[
       {"label":"line-game4-figure","value":"Fig ","valueHREF":"{{site.baseurl}}/game-playing-exercises/#line-game4-figure"},
       {"label":"3candy-figure","value":"Fig ","valueHREF":"{{site.baseurl}}/decision-theory-exercises/#3candy-figure"},
       {"label":"alpha-beta-proof-figure","value":"Fig ","valueHREF":"{{site.baseurl}}/game-playing-exercises/#alpha-beta-proof-figure"},

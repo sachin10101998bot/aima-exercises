@@ -17,6 +17,8 @@ request.onload = function() {
     var paperreferencesseculdedlength = crossreferences["paperRef"].length;
     var equationreferencessecluded = crossreferences["equationRef"];
     var equationreferencessecludedlength = crossreferences["equationRef"].length;
+    var insideExercisesFigRefsecluded =crossreferences["insideExercisesFigRef"];
+    var insideExercisesFigRefsecludedlength = crossreferences["insideExerciseFigRef"].length;
     var myH1 = document.getElementsByClassName('pageRef');
     var myI1 = document.getElementsByClassName('sectionRef');
     var myJ1 = document.getElementsByClassName('exerciseRef');
@@ -29,6 +31,8 @@ request.onload = function() {
     var myL2 = document.getElementsByClassName('paperRef').length;
     var myM1 = document.getElementsByClassName('equationRef');
     var myM2 = document.getElementsByClassName('equationRef').length;
+    var myN1 = document.getElementsByClassName('insideExerciseFigRef');
+    var myN2 = document.getElementsByClassName('insideExerciseFigRef').length;
     for(var p=0 ; p<myH2; p++)
     {
       var newpage=myH1[p].innerHTML;
