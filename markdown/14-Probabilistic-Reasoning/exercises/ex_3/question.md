@@ -1,6 +1,6 @@
 
 
-Equation (<a href="#">parameter-joint-repn-equation</a> on
+Equation (<a class="equationRef" title="" href="#">parameter-joint-repn-equation</a> on
 page <a class="pageRef" title="" href="#">parameter-joint-repn-equation</a> defines the joint distribution represented by a
 Bayesian network in terms of the parameters
 $\theta(X_i{{\,|\,}}{Parents}(X_i))$. This exercise asks you to derive
