@@ -5,25 +5,49 @@ request.responseType = 'json';
 request.send();
 request.onload = function() {
     var crossreferences = request.response;
-    console.log(crossreferences);
     var pagereferencessecluded = crossreferences["pageRef"];
-    var myH1 = document.getElementById('pageRef').innerHTML;
-    var lengthofpageref = pagereferencessecluded.length;
-    var shayad = myH1.toString();
-    for(var i=0 ; i<lengthofpageref ; i++)
+    var sectionreferencessecluded = crossreferences["sectionRef"];
+    var pagereferencessecludedlength = crossreferences["pageRef"].length;
+    var sectionreferencessecludedlength = crossreferences["sectionRef"].length;
+    console.log(sectionreferencessecludedlength);
+    console.log(sectionreferencessecluded);
+    var myH1 = document.getElementsByClassName('pageRef');
+    var myI1 = document.getElementsByClassName('sectionRef');
+    var myH2 = document.getElementsByClassName('pageRef').length;
+    var myI2 = document.getElementsByClassName('sectionRef').length;
+    console.log(myI1);
+    console.log(myI2);
+    for(var p=0 ; p<myH2; p++)
     {
-      if(pagereferencessecluded[i].pageName == shayad)
+      console.log(myH1[p].innerHTML);
+      var newpage=myH1[p].innerHTML;
+      
+      for(var o=0;o<pagereferencessecludedlength;o++)
       {
-        console.log(myH1);
-        console.log(document.getElementById('pageRef').innerHTML);
-        var shayad2 = pagereferencessecluded[i].pageNumber
-        console.log(pagereferencessecluded[i].pageNumber);
-        myH1=shayad2;
-        document.getElementById("pageRef").title = myH1;
         
+        if(pagereferencessecluded[o].label==newpage)
+        {
+          console.log(pagereferencessecluded[o].value);
+          myH1[p].innerHTML=pagereferencessecluded[o].value;
+          myH1[p].title=pagereferencessecluded[o].label;
+          console.log(myH1[p].title);
+          console.log(myH1[p].innerHTML);
+        }
       }
-         
+
     }
-    
-    
+    for( var p=0 ; p<myI2; p++)
+    {
+      console.log(myI1[p].innerHTML);
+      var newsection=myI1[p].innerHTML;
+      for(var o=0;o<sectionreferencessecludedlength;o++)
+      {
+        if(sectionreferencessecluded[o].label==newsection)
+        {
+          myI1[p].innerHTML=sectionreferencessecluded[o].value;
+          myI1[p].title=sectionreferencessecluded[o].label;
+        }
+      }
+    }
+
   }
