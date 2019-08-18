@@ -9,36 +9,36 @@ request.onload = function() {
     var sectionreferencessecluded = crossreferences["sectionRef"];
     var pagereferencessecludedlength = crossreferences["pageRef"].length;
     var sectionreferencessecludedlength = crossreferences["sectionRef"].length;
-    console.log(sectionreferencessecludedlength);
-    console.log(sectionreferencessecluded);
+    var exercisesreferencesecluded = crossreferences["exerciseRef"];
+    var exercisesreferencesecludedlength = crossreferences["exerciseRef"].length;
+    var chapterreferencessecluded = crossreferences["chapterRef"];
+    var chapterreferencessecludedlength = crossreferences["chapterRef"].length;
+    var papereferencessecluded = crossreferences["paperRef"];
+    var paperreferencesseculdedlength = crossreferences["paperRef"].length;
     var myH1 = document.getElementsByClassName('pageRef');
     var myI1 = document.getElementsByClassName('sectionRef');
+    var myJ1 = document.getElementsByClassName('exerciseRef');
     var myH2 = document.getElementsByClassName('pageRef').length;
     var myI2 = document.getElementsByClassName('sectionRef').length;
-    console.log(myI1);
-    console.log(myI2);
+    var myJ2 = document.getElementsByClassName('exerciseRef').length;
+    var myK1 = document.getElementsByClassName('chapterRef');
+    var myK2 = document.getElementsByClassName('chapterRef').length;
+    var myL1 = document.getElementsByClassName('paperRef');
+    var myL2 = document.getElementsByClassName('paperRef').length;
     for(var p=0 ; p<myH2; p++)
     {
-      console.log(myH1[p].innerHTML);
       var newpage=myH1[p].innerHTML;
-      
       for(var o=0;o<pagereferencessecludedlength;o++)
       {
-        
         if(pagereferencessecluded[o].label==newpage)
-        {
-          console.log(pagereferencessecluded[o].value);
+        { 
           myH1[p].innerHTML=pagereferencessecluded[o].value;
           myH1[p].title=pagereferencessecluded[o].label;
-          console.log(myH1[p].title);
-          console.log(myH1[p].innerHTML);
         }
       }
-
     }
     for( var p=0 ; p<myI2; p++)
     {
-      console.log(myI1[p].innerHTML);
       var newsection=myI1[p].innerHTML;
       for(var o=0;o<sectionreferencessecludedlength;o++)
       {
@@ -49,5 +49,46 @@ request.onload = function() {
         }
       }
     }
+    for(var p=0;p<myJ2;p++)
+    {
+      var newexercise = myJ1[p].innerHTML;
+      for(var o=0;o<exercisesreferencesecludedlength;o++)
+      {
+        if(exercisesreferencesecluded[o].label==newexercise)
+        {
+          myJ1[p].innerHTML=exercisesreferencesecluded[o].value;
+          myJ1[p].title=exercisesreferencesecluded[o].label;
+          myJ1[p].href=exercisesreferencesecluded[o].valueHREF;
+        }
+      }
 
+    }
+    for(var p=0;p<myK2;p++)
+    { 
+      var newchapter = myK1[p].innerHTML;
+      for(var o=0;o<chapterreferencessecludedlength;o++)
+      {
+        if(chapterreferencessecluded[o].label==newchapter)
+        {
+          myK1[p].innerHTML=chapterreferencessecluded[o].value;
+          myK1[p].title=chapterreferencessecluded[o].label;
+        }
+      }
+    }
+    for(var p=0;p<myL2;p++)
+    {
+
+      var newpaper=myL1[p].innerHTML;
+      console.log(newpaper);
+      for(var o=0;o<paperreferencesseculdedlength;o++)
+      {
+        console.log(papereferencessecluded[o].label);
+        console.log(papereferencessecluded[o].value);
+        if(papereferencessecluded[o].label==newpaper)
+        {
+          
+          myL1[p].title=papereferencessecluded[o].value
+        }
+      }
+    }
   }
