@@ -85,7 +85,8 @@ layout: null
       {"label":"illuminationfigure", "value":""},
       {"label":"inverse-kinematics-not-unique", "value":""},
       {"label":"polygon-stability-condition-page.", "value":""},
-      {"label":"multivalued-sensorless-page","value":""}
+      {"label":"multivalued-sensorless-page","value":""},
+      {"label":"backward-chaining-algorithm","value":""}
     ]
     ,
 
