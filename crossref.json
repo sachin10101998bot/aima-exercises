@@ -328,7 +328,7 @@ layout: null
       {"label":"logical-equivalence-table", "value":"7.11"},
       {"label":"pl-horn-example-figure", "value":"7.16"},
       {"label":"subsumption-lattice-figure", "value":"9.2"},
-      {"label":"backward-chaining-algorithm", "value":"9.6"},
+      {"label":"backward-chaining-algorithm","value":"9.6"},
       {"label":"airport-pddl-algorithm", "value":"10.1"},
       {"label":"sussman-anomaly-figure", "value":"10.4"},
       {"label":"satplan-agent-algorithm", "value":"7.22"},
