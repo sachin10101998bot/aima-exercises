@@ -70,7 +70,7 @@ request.onload = function() {
         {
           myJ1[p].innerHTML=exercisesreferencesecluded[o].value;
           myJ1[p].title=exercisesreferencesecluded[o].label;
-          myJ1[p].href=exercisesreferencesecluded[o].valueHREF;
+          myJ1[p].href=exercisesreferencesecluded[o].link;
         }
       }
 
