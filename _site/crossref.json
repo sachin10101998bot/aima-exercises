@@ -119,7 +119,7 @@
       {"label":"path-planning-agent-exercise", "value":"4.11","link":"/aima-exercises/advanced-search-exercises/ex_11"},
       {"label":"path-planning-exercise", "value":"3.9","link":"/aima-exercises/search-exercises/ex_9"},
       {"label":"two-friends-exercise", "value":"3.5","link":"/aima-exercises/search-exercises/ex_5"},
-      {"label":"game-playing-chance-exercise.", "value":"5.4","link":"/aima-exercises/game-playing-exercises/ex_4"},
+      {"label":"game-playing-chance-exercise","value":"5.4","link":"/aima-exercises/game-playing-exercises/ex_4"},
       {"label":"game-playing-monte-carlo-exercise", "value":"5.21","link":"/aima-exercises/game-playing-exercises/ex_21"},
       {"label":"convert-clausal-exercise", "value":"7.25","link":"/aima-exercises/knowledge-logic-exercises/ex_25"},
       {"label":"telescope-exercise", "value":"14.14"},

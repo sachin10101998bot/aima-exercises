@@ -6,7 +6,7 @@ two-player game. We assume now that the players take turns moving. The
 game ends only when the players are on the same node; the terminal
 payoff to the pursuer is minus the total time taken. (The evader “wins”
 by never losing.) An example is shown in Figure.
-<a href="#pursuit-evasion-game-figure">pursuit-evasion-game-figure</a><br>
+<a class="insideExerciseFigRef" title="" href="#pursuit-evasion-game-figure">pursuit-evasion-game-figure</a><br>
 
 
 1.  Copy the game tree and mark the values of the terminal nodes.<br>
