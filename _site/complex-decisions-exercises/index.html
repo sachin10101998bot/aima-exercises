@@ -164,7 +164,7 @@
 <p class="card-text">
 
 For the $4\times 3$ world shown in
-Figure <a class="insideBookFigRef" id="insidebookfigref" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/sequential-decision-world-figure.png">sequential-decision-world-figure</a>., calculate
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/sequential-decision-world-figure.png">sequential-decision-world-figure</a>., calculate
 which squares can be reached from (1,1) by the action sequence
 $[{Up},{Up},{Right},{Right},{Right}]$ and with what
 probabilities. Explain how this computation is related to the prediction
@@ -185,11 +185,11 @@ hidden Markov model.
 <p class="card-text">
 
 For the $4\times 3$ world shown in
-Figure <a class="insideBookFigRef" id="insidebookfigref" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/sequential-decision-world-figure.png">sequential-decision-world-figure</a>, calculate
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/sequential-decision-world-figure.png">sequential-decision-world-figure</a>, calculate
 which squares can be reached from (1,1) by the action sequence
 $[{Right},{Right},{Right},{Up},{Up}]$ and with what
 probabilities. Explain how this computation is related to the prediction
-task (see Section <a class="sectionRef" id="sectionref" title="" href="#">general-filtering-section</a>) for a
+task (see Section <a class="sectionRef" title="" href="#">general-filtering-section</a>) for a
 hidden Markov model.
 </p>
 </div>
@@ -206,12 +206,12 @@ hidden Markov model.
 
 Select a specific member of the set of policies that are optimal for
 $R(s)&gt;0$ as shown in
-Figure <a class="insideBookFigRef" id="insidebookfigref" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/sequential-decision-policies-figure.png">sequential-decision-policies-figure</a>(b), and
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/sequential-decision-policies-figure.png">sequential-decision-policies-figure</a>(b), and
 calculate the fraction of time the agent spends in each state, in the
 limit, if the policy is executed forever. (<i>Hint</i>:
 Construct the state-to-state transition probability matrix corresponding
 to the policy and see
-Exercise <a class="exerciseRef" id="exerciseref" href="/aima-exercises/dbn-exercises/ex_2/">markov-convergence-exercise</a>.)
+Exercise <a class="exerciseRef" href="/aima-exercises/dbn-exercises/ex_2/">markov-convergence-exercise</a>.)
 </p>
 </div>
 </div>
@@ -289,7 +289,7 @@ reward function $R(s,a,s')$ that also depends on the outcome state.<br />
 <p class="card-text">
 
 For the environment shown in
-Figure <a class="insideBookFigRef" id="insidebookfigref" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/sequential-decision-world-figure.png">sequential-decision-world-figure</a>, find all the
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/sequential-decision-world-figure.png">sequential-decision-world-figure</a>, find all the
 threshold values for $R(s)$ such that the optimal policy changes when
 the threshold is crossed. You will need a way to calculate the optimal
 policy and its value for fixed $R(s)$. (<i>Hint</i>: Prove that
@@ -307,8 +307,8 @@ the value of any fixed policy varies linearly with $R(s)$.)
 <div class="card-body">
 <p class="card-text">
 
-Equation (<a class="equationRef" id="equationref" title="" href="#">vi-contraction-equation</a>) on
-page <a class="pageRef" id="pageref" title="" href="#">vi-contraction-equation</a> states that the Bellman operator is a contraction.<br />
+Equation (<a class="equationRef" title="" href="#">vi-contraction-equation</a>) on
+page <a class="pageRef" title="" href="#">vi-contraction-equation</a> states that the Bellman operator is a contraction.<br />
 
 1.  Show that, for any functions $f$ and $g$,
     $$|\max_a f(a) - \max_a g(a)| \leq \max_a |f(a) - g(a)|\ .$$<br />
@@ -331,7 +331,7 @@ page <a class="pageRef" id="pageref" title="" href="#">vi-contraction-equation<
 
 This exercise considers two-player MDPs that correspond to zero-sum,
 turn-taking games like those in
-Chapter <a class="chapterRef" id="chapterref" href="/aima-exercises/game-playing-exercises/">game-playing-chapter</a>. Let the players be $A$
+Chapter <a class="chapterRef" href="/aima-exercises/game-playing-exercises/">game-playing-chapter</a>. Let the players be $A$
 and $B$, and let $R(s)$ be the reward for player $A$ in state $s$. (The
 reward for $B$ is always equal and opposite.)<br />
 
@@ -345,7 +345,7 @@ reward for $B$ is always equal and opposite.)<br />
     and define a suitable termination criterion.<br />
 
 3.  Consider the game described in
-    Figure <a class="insideBookFigRef" id="insidebookfigref" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/line-game4-figure.png">line-game4-figure</a> on page <a class="pageRef" id="pageref" title="" href="#">line-game4-figure</a>.
+    Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/line-game4-figure.png">line-game4-figure</a> on page <a class="pageRef" id="pageref" title="" href="#">line-game4-figure</a>.
     Draw the state space (rather than the game tree), showing the moves
     by $A$ as solid lines and moves by $B$ as dashed lines. Mark each
     state with $R(s)$. You will find it helpful to arrange the states
@@ -373,7 +373,7 @@ reward for $B$ is always equal and opposite.)<br />
 </div>
 <div class="card-body">
 <p class="card-text">Consider the $3 \times 3$ world shown in
-Figure <a class="insideExercisesFigRef" id="insideexercisesfigref" href="#grid-mdp-figure">grid-mdp-figure</a>(a). The transition model is the
+Figure <a class="insideExercisesFigRef" href="#grid-mdp-figure">grid-mdp-figure</a>(a). The transition model is the
 same as in the $4\times 3$
 Figure <a class="insideBookFigRef" id="insidebookfigref" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/sequential-decision-world-figure.png">sequential-decision-world-figure</a>: 80% of the
 time the agent goes in the direction it selects; the rest of the time it
@@ -405,7 +405,7 @@ each policy.<br />
 <p class="card-text">
 
 Consider the $101 \times 3$ world shown in
-Figure <a class="insideExercisesFigRef" id="insideexercisesfigref" href="#grid-mdp-figure">grid-mdp-figure</a>(b). In the start state the agent
+Figure <a class="insideExercisesFigRef" href="#grid-mdp-figure">grid-mdp-figure</a>(b). In the start state the agent
 has a choice of two deterministic actions, <i>Up</i> or
 <i>Down</i>, but in the other states the agent has one
 deterministic action, <i>Right</i>. Assuming a discounted reward
@@ -470,7 +470,7 @@ Answer the following questions:<br />
 <p class="card-text">
 
 Consider the $4\times 3$ world shown in
-Figure <a class="insideBookFigRef" id="insidebookfigref" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/sequential-decision-world-figure.png">sequential-decision-world-figure</a><br />.
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/sequential-decision-world-figure.png">sequential-decision-world-figure</a><br />.
 
 1.  Implement an environment simulator for this environment, such that
     the specific geography of the environment is easily altered. Some
@@ -515,7 +515,7 @@ model ${P}$, compared with an agent using correct values?
 <p class="card-text">
 
 Let the initial belief state $b_0$ for the
-$4\times 3$ POMDP on page <a class="pageRef" id="pageref" title="" href="#">4x3-pomdp-page</a> be the uniform distribution
+$4\times 3$ POMDP on page <a class="pageRef" title="" href="#">4x3-pomdp-page</a> be the uniform distribution
 over the nonterminal states, i.e.,
 $&lt; \frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},\frac{1}{9},0,0 &gt;$.
 Calculate the exact belief state $b_1$ after the agent moves and its
@@ -550,7 +550,7 @@ sensorless environment?
 <p class="card-text">
 
 Consider a version of the two-state POMDP on
-page <a class="pageRef" id="pageref" title="" href="#">2state-pomdp-page</a> in which the sensor is 90% reliable in state 0 but
+page <a class="pageRef" title="" href="#">2state-pomdp-page</a> in which the sensor is 90% reliable in state 0 but
 provides no information in state 1 (that is, it reports 0 or 1 with
 equal probability). Analyze, either qualitatively or quantitatively, the
 utility function and the optimal policy for this problem.
@@ -637,7 +637,7 @@ chooses to ${testify}$ or ${refuse}$ in the current round?
 <div class="card-body">
 <p class="card-text">
 
-The following payoff matrix, from @Blinder:1983 by way of <a class="paperRef" id="paperref" title="" href="">Bernstein:1996</a>, shows a game between
+The following payoff matrix, from @Blinder:1983 by way of <a class="paperRef" title="" href="">Bernstein:1996</a>, shows a game between
 politicians and the Federal Reserve.<br />
 
 |     | Fed: contract | Fed: do nothing  | Fed: expand     |
@@ -735,7 +735,7 @@ and 1 for a tie. <br />
     Under what conditions, in terms of $p$ and $q$, would it be rational
     for both teams to agree to this pact?<br />
 
-4.  <a class="paperRef" id="paperref" title="" href="">Longley+Sankaran:2005</a> report that since the rule change, the percentage of games with a
+4.  <a class="paperRef" title="" href="">Longley+Sankaran:2005</a> report that since the rule change, the percentage of games with a
     winner in overtime went up 18.2%, as desired, but the percentage of
     overtime games also went up 3.6%. What does that suggest about
     possible collusion or conservative play after the rule change?<br />

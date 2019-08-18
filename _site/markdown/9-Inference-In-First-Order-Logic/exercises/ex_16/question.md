@@ -13,4 +13,4 @@ using a backward-chaining algorithm.<br>
 3.  How many solutions for $h$ actually follow from your sentences?<br>
 
 4.  Can you think of a way to find all of them? (<i>Hint</i>:
-    See <a class="paperRef" id="paperref" title="" href="">Smith+al:1986</a>.)<br>
+    See <a class="paperRef" title="" href="">Smith+al:1986</a>.)<br>

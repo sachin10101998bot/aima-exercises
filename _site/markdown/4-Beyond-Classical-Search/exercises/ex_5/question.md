@@ -1,7 +1,7 @@
 
 
 The **And-Or-Graph-Search** algorithm in
-Figure <a class="insideBookFigRef" id="insidebookfigref" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/and-or-graph-search-algorithm.png">and-or-graph-search-algorithm</a> checks for
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/and-or-graph-search-algorithm.png">and-or-graph-search-algorithm</a> checks for
 repeated states only on the path from the root to the current state.
 Suppose that, in addition, the algorithm were to store
 *every* visited state and check against that list. (See in
@@ -11,5 +11,5 @@ should use that information when a repeated state is found.
 (*Hint*: You will need to distinguish at least between
 states for which a successful subplan was constructed previously and
 states for which no subplan could be found.) Explain how to use labels,
-as defined in Section <a class="sectionRef" id="sectionref" title="" href="#">cyclic-plan-section</a>, to avoid
+as defined in Section <a class="sectionRef" title="" href="#">cyclic-plan-section</a>, to avoid
 having multiple copies of subplans.

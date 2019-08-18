@@ -1,6 +1,6 @@
 
 
-Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" id="insideexercisesfigref" href="#politics-figure">politics-figure</a><br>.
+Consider the Bayes net shown in Figure <a class="insideExercisesFigRef" href="#politics-figure">politics-figure</a><br>.
 
 1.  Which of the following are asserted by the network
     <i>structure</i>?<br>

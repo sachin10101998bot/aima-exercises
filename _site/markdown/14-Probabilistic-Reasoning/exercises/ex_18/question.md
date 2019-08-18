@@ -1,9 +1,9 @@
 
 
 Consider the variable elimination algorithm in
-Figure <a class="insideBookFigRef" id="insidebookfigref" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/elimination-ask-algorithm.png">elimination-ask-algorithm</a> (page <a class="pageRef" id="pageref" title="" href="#">elimination-ask-algorithm</a>).<br>
+Figure <a class="insideBookFigRef" target="_blank" href="https://aimacode.github.io/aima-exercises/figures/elimination-ask-algorithm.png">elimination-ask-algorithm</a> (page <a class="pageRef" title="" href="#">elimination-ask-algorithm</a>).<br>
 
-1.  Section <a class="sectionRef" id="sectionref" title="" href="#">exact-inference-section</a> applies variable
+1.  Section <a class="sectionRef" title="" href="#">exact-inference-section</a> applies variable
     elimination to the query
     $${\textbf{P}}({Burglary}{{\,|\,}}{JohnCalls}{{\,=\,}}{true},{MaryCalls}{{\,=\,}}{true})\ .$$
     Perform the calculations indicated and check that the answer
