@@ -33,12 +33,12 @@ layout: null
 
     "pageRef":[
       {"label":"vacuum-rationality-page", "value":"38"},
-      {"label":"nqueens-page", "value":"72"},
-      {"label":"non-negative-g", "value":"68"},
-      {"label":"iterative-lengthening-page", "value":"90"},
+      {"label":"nqueens-page", "value":""},
+      {"label":"non-negative-g", "value":""},
+      {"label":"iterative-lengthening-page", "value":""},
       {"label":"I-to-F", "value":""},
-      {"label":"Gaschnig-h-page", "value":"105"}, 
-      {"label":"wumpus-seq35-figure", "value":"239"},
+      {"label":"Gaschnig-h-page", "value":""}, 
+      {"label":"wumpus-seq35-figure", "value":""},
       {"label":"logical-equivalence-table", "value":""}, 
       {"label":"backtracking-search-algorithm", "value":""}, 
       {"label":"1cnf-belief-state-page", "value":""}, 
@@ -361,7 +361,7 @@ layout: null
     ,
 
     "chapterRef":[
-      {"label":"search-chapter","value":"3"},
+      {"label":"search-chapter","value":"Solving Problems by Searching"},
       {"label":"csp-chapter","value":"6"},
       {"label":"nlp1-chapter","value":"23"},
       {"label":"nlp-english-chapter","value":"22"},
