@@ -81,7 +81,8 @@
       {"label":"candy-counts-page", "value":""},
       {"label":"illuminationfigure", "value":""},
       {"label":"inverse-kinematics-not-unique", "value":""},
-      {"label":"polygon-stability-condition-page.", "value":""}
+      {"label":"polygon-stability-condition-page.", "value":""},
+      {"label":"multivalued-sensorless-page","value":""}
     ]
     ,
 
