@@ -15,6 +15,8 @@ request.onload = function() {
     var chapterreferencessecludedlength = crossreferences["chapterRef"].length;
     var papereferencessecluded = crossreferences["paperRef"];
     var paperreferencesseculdedlength = crossreferences["paperRef"].length;
+    var equationreferencessecluded = crossreferences["equationRef"];
+    var equationreferencessecludedlength = crossreferences["equationRef"].length;
     var myH1 = document.getElementsByClassName('pageRef');
     var myI1 = document.getElementsByClassName('sectionRef');
     var myJ1 = document.getElementsByClassName('exerciseRef');
@@ -25,6 +27,8 @@ request.onload = function() {
     var myK2 = document.getElementsByClassName('chapterRef').length;
     var myL1 = document.getElementsByClassName('paperRef');
     var myL2 = document.getElementsByClassName('paperRef').length;
+    var myM1 = document.getElementsByClassName('equationRef');
+    var myM2 = document.getElementsByClassName('equationRef').length;
     for(var p=0 ; p<myH2; p++)
     {
       var newpage=myH1[p].innerHTML;
@@ -79,15 +83,30 @@ request.onload = function() {
     {
 
       var newpaper=myL1[p].innerHTML;
-      console.log(newpaper);
+      
       for(var o=0;o<paperreferencesseculdedlength;o++)
       {
-        console.log(papereferencessecluded[o].label);
-        console.log(papereferencessecluded[o].value);
+       
         if(papereferencessecluded[o].label==newpaper)
         {
-          
-          myL1[p].title=papereferencessecluded[o].value
+          myL1[p].title=papereferencessecluded[o].value;
+          myL1[p].innerHTML=papereferencessecluded[o].label;
+        }
+      }
+    }
+    console.log(myM2);
+    console.log(myM1);
+    for(var p=0;p<myM2;p++)
+    {
+      var newequation = myM1[p].innerHTML;
+      console.log(newequation);
+      for(var o=0;o<equationreferencessecludedlength;o++)
+      {
+        console.log(equationreferencessecluded[o].label);
+        if(equationreferencessecluded[o].label=newequation)
+        {
+          myM1[p].innerHTML=equationreferencessecluded[o].value;
+          myM1[p].title=equationreferencessecluded[o].label;
         }
       }
     }
