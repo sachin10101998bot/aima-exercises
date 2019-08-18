@@ -29,8 +29,8 @@ layout: null
       {"label":"McAllester:1988","value":"McAllester, David Allen. 'Conspiracy numbers for min-max search.' Artificial Intelligence 35.3 (1988): 287-310."},
       {"label":"Nilsson:1971","value":"Astedt, B., L. Svanberg, and I. M. Nilsson. 'Fibrin degradation products and ovarian tumours.' British medical journal 4.5785 (1971): 458-459."},
       {"label":"Mostow+Prieditis:1989","value":"Mostow, Jack, and Armand Prieditis. 'Discovering admissible heuristics by abstracting and optimizing: A transformational approach.' (1989): 701-707."},
-      {"label":"Hansson+al:1992","value":"Bigos, STANLEY J., et al. 'A longitudinal, prospective study of industrial back injury reporting.' Clinical orthopaedics and related research 279 (1992): 21-34."}
-
+      {"label":"Hansson+al:1992","value":"Bigos, STANLEY J., et al. 'A longitudinal, prospective study of industrial back injury reporting.' Clinical orthopaedics and related research 279 (1992): 21-34."},
+      {"label":"Blinder:1983","value":"Blinder, Alan S., and Joseph E. Stiglitz. 'Money, credit constraints, and economic activity.'' (1983)."}
     ]
     ,
 
@@ -86,7 +86,9 @@ layout: null
       {"label":"inverse-kinematics-not-unique", "value":""},
       {"label":"polygon-stability-condition-page.", "value":""},
       {"label":"multivalued-sensorless-page","value":""},
-      {"label":"backward-chaining-algorithm","value":""}
+      {"label":"backward-chaining-algorithm","value":""},
+      {"label":"LG-network-page","value":""},
+      {"label":"Fig5","value":""}
     ]
     ,
 
@@ -297,7 +299,7 @@ layout: null
       {"label":"washing-clothes-exercise", "value":"23.1","link":"{{site.baseurl}}/nlp-english-exercises/ex_1"},
       {"label":"chomsky-form-exercise", "value":"23.10","link":"{{site.baseurl}}/nlp-english-exercises/ex_10"},
       {"label":"exercise-subj-verb-agree", "value":"23.12","link":"{{site.baseurl}}/nlp-english-exercises/ex_12"},
-      {"label":"washing-clothes2-exercise)", "value":"23.17","link":"{{site.baseurl}}/nlp-english-exercises/ex_17"},
+      {"label":"washing-clothes2-exercise", "value":"23.17","link":"{{site.baseurl}}/nlp-english-exercises/ex_17"},
       {"label":"mcl-biasdness-exercise", "value":"25.1","link":"{{site.baseurl}}/robotics-exercises/ex_1"},
       {"label":"mcl-implement-exercise", "value":"25.2","link":"{{site.baseurl}}/robotics-exercises/ex_2"},
       {"label":"AB-manipulator-ex", "value":"25.3","link":"{{site.baseurl}}/robotics-exercises/ex_3"},
@@ -358,7 +360,8 @@ layout: null
       {"label":"airport-au-id-figure", "value":"16.7"},
       {"label":"airport-id-figure", "value":"16.6"},
       {"label":"line-game4-figure", "value":"5.17"},
-      {"label":"mixture-networks-figure","value":"20.11"}
+      {"label":"mixture-networks-figure","value":"20.11"},
+      {"label":"forward-backward-algorithm","value":"8.2"}
 
 
 

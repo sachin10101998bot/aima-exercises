@@ -1,5 +1,5 @@
 The <b>Markov
-blanket</b> of a variable is defined on page <a href="#">markov-blanket-page</a>.
+blanket</b> of a variable is defined on page <a class="pageRef" title="" href="">markov-blanket-page</a>.
 Prove that a variable is independent of all other variables in the
 network, given its Markov blanket and derive
 Equation (<a class="equationRef" title="" href="#">markov-blanket-equation</a>)
