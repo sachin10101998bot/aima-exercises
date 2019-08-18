@@ -22,7 +22,8 @@
       {"label":"Jurafsky+Martin:2000", "value":"Stolcke, Andreas, et al. 'Dialogue act modeling for automatic tagging and recognition of conversational speech.' Computational linguistics 26.3 (2000): 339-373."},
       {"label":"Knight:1999", "value":"Arksey, Hilary, and Peter T. Knight. Interviewing for social scientists: An introductory resource with examples. Sage, 1999."},
       {"label":"Bransford+Johnson:1973", "value":"Bransford, John D., and Marcia K. Johnson. 'Considerations of some problems of comprehension.' Visual information processing. Academic Press, 1973. 383-438."},
-      {"label":"Perlis:1982", "value":"Perlis, Alan J. 'Special feature: Epigrams on programming.' ACM Sigplan Notices 17.9 (1982): 7-13."}
+      {"label":"Perlis:1982", "value":"Perlis, Alan J. 'Special feature: Epigrams on programming.' ACM Sigplan Notices 17.9 (1982): 7-13."},
+      {"label":"McAllester:1988","value":"McAllester, David Allen. 'Conspiracy numbers for min-max search.' Artificial Intelligence 35.3 (1988): 287-310."}
 
     ]
     ,
